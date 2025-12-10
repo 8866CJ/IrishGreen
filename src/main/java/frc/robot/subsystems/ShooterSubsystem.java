@@ -15,7 +15,6 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.ShooterConstants;
-import frc.robot.Constants.TurretConstants;
 
 /**
  * ShooterSubsystem controls the flywheel, shooter feed, and transfer motors.
@@ -25,7 +24,7 @@ public class ShooterSubsystem extends SubsystemBase {
   // Motors
   private final TalonSRX m_flywheelMotor;
   private final TalonSRX m_shooterMotor;
-  private final SparkMax m_transferMotor;
+  // private final SparkMax m_transferMotor;
 
   // State machine
   public enum ShooterState {
@@ -52,7 +51,7 @@ public class ShooterSubsystem extends SubsystemBase {
   public ShooterSubsystem() {
     m_flywheelMotor = new TalonSRX(ShooterConstants.kFlywheelMotorId);
     m_shooterMotor = new TalonSRX(ShooterConstants.kShooterMotorId);
-    m_transferMotor = new SparkMax(TurretConstants.kTurretMotorId, MotorType.kBrushless);
+    // m_transferMotor = new SparkMax(ShooterConstants.kTurretMotorId, MotorType.kBrushless);
 
     // Initialize NetworkTables
     m_subsysTable = NetworkTableInstance.getDefault().getTable("Subsystems");
@@ -116,7 +115,7 @@ public class ShooterSubsystem extends SubsystemBase {
    */
   public void setTransferSpeed(double speed) {
     m_transferSpeed = speed;
-    m_transferMotor.set(m_transferSpeed);
+    // m_transferMotor.set(m_transferSpeed);
   }
 
   /** @return Current flywheel speed */
@@ -140,7 +139,7 @@ public class ShooterSubsystem extends SubsystemBase {
   private void updateMotors() {
     m_flywheelMotor.set(ControlMode.PercentOutput, m_flywheelSpeed);
     m_shooterMotor.set(ControlMode.PercentOutput, m_shooterSpeed);
-    m_transferMotor.set(m_transferSpeed);
+    // m_transferMotor.set(m_transferSpeed);
   }
 
   /** Runs the state machine logic. */

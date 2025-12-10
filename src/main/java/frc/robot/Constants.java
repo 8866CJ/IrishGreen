@@ -20,10 +20,10 @@ public final class Constants {
 
   public static class DriveConstants {
     // CAN IDs
-    public static final int kFrontLeftMotorId = 0;
-    public static final int kBackLeftMotorId = 1;
-    public static final int kFrontRightMotorId = 2;
-    public static final int kBackRightMotorId = 3;
+    public static final int kFrontLeftMotorId = 5;
+    public static final int kBackLeftMotorId = 4;
+    public static final int kFrontRightMotorId = 6;
+    public static final int kBackRightMotorId = 7;
 
     // Robot physical constants
     public static final double kWheelbaseWidth = 0.57; // meters
@@ -42,7 +42,7 @@ public final class Constants {
 
   public static class TurretConstants {
     // CAN ID
-    public static final int kTurretMotorId = 4;
+    public static final int kTurretMotorId = 8;
 
     // Turret limits and control
     public static final double kMaxRotation = 190.0; // degrees (±95 from center)
@@ -59,7 +59,7 @@ public final class Constants {
 
   public static class IntakeConstants {
     // CAN ID
-    public static final int kIntakeMotorId = 6;
+    public static final int kIntakeMotorId = 1;
 
     // Speeds
     public static final double kIntakeSpeed = 0.6;
@@ -67,9 +67,9 @@ public final class Constants {
 
   public static class ShooterConstants {
     // CAN IDs
-    public static final int kTransferMotorId = 5;
-    public static final int kFlywheelMotorId = 7;
-    public static final int kShooterMotorId = 8;
+    public static final int kTransferMotorId = 9;
+    public static final int kFlywheelMotorId = 2;
+    public static final int kShooterMotorId = 3;
 
     // Flywheel constants
     public static final double kFlywheelTargetSpeed = 0.5; // 50% speed

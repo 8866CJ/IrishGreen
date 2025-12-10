@@ -97,11 +97,11 @@ public class RobotContainer {
 
     // D-Pad Right (POV 90) - Manual turret right
     m_driverController.pov(90)
-        .whileTrue(new TurretManualCommand(m_turretSubsystem, 1.0));
+        .whileTrue(new TurretManualCommand(m_turretSubsystem, 0.2));
 
     // D-Pad Left (POV 270) - Manual turret left
     m_driverController.pov(270)
-        .whileTrue(new TurretManualCommand(m_turretSubsystem, -1.0));
+        .whileTrue(new TurretManualCommand(m_turretSubsystem, -0.2));
 
     // ==================== Utility ====================
     // A Button - Reset odometry
